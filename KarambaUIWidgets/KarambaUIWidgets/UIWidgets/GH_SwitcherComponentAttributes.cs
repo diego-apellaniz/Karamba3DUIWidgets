@@ -13,7 +13,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using static Grasshopper.GUI.Canvas.GH_Canvas;
 
-namespace Parametric_FEM_Toolbox.UIWidgets
+namespace KarambaUIWidgets.UIWidgets
 {
     public class GH_SwitcherComponentAttributes : GH_ComponentAttributes
     {

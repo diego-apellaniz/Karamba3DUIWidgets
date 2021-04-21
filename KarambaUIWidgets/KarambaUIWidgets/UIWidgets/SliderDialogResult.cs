@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Eto.Forms;
 
-namespace Parametric_FEM_Toolbox.UIWidgets
+namespace KarambaUIWidgets.UIWidgets
 {
     public sealed class SliderDialogResult
     {

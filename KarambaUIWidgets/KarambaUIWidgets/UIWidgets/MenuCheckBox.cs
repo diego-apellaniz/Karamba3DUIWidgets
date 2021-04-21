@@ -5,7 +5,7 @@ using GH_IO.Serialization;
 using Grasshopper.GUI;
 using Grasshopper.GUI.Canvas;
 
-namespace Parametric_FEM_Toolbox.UIWidgets
+namespace KarambaUIWidgets.UIWidgets
 {
 	public class MenuCheckBox : GH_Attr_Widget
 	{

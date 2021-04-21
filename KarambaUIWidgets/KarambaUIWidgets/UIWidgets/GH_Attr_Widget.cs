@@ -4,7 +4,7 @@ using Grasshopper.GUI.Canvas;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Parametric_FEM_Toolbox.UIWidgets
+namespace KarambaUIWidgets.UIWidgets
 {
     public abstract class GH_Attr_Widget
     {

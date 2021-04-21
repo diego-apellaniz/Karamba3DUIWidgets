@@ -3,9 +3,8 @@ using System.Windows.Forms;
 using GH_IO.Serialization;
 using Grasshopper.GUI;
 using Grasshopper.GUI.Canvas;
-using Parametric_FEM_Toolbox.UIWidgets;
 
-namespace Parametric_FEM_Toolbox.UIWidgets
+namespace KarambaUIWidgets.UIWidgets
 {
     public class MenuStaticText : GH_Attr_Widget
 	{

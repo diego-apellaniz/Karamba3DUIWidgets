@@ -2,9 +2,9 @@
 using System.Drawing;
 using Eto.Forms;
 using Grasshopper.Kernel;
-using Parametric_FEM_Toolbox.Utilities;
 
-namespace Parametric_FEM_Toolbox.UIWidgets
+
+namespace KarambaUIWidgets.UIWidgets
 {
     public sealed class WidgetServer
     {

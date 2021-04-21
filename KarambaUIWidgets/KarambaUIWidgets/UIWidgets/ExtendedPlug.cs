@@ -1,7 +1,7 @@
 ﻿using Grasshopper.Kernel;
 using System.Collections.Generic;
 
-namespace Parametric_FEM_Toolbox.UIWidgets
+namespace KarambaUIWidgets.UIWidgets
 {
     public class ExtendedPlug
     {

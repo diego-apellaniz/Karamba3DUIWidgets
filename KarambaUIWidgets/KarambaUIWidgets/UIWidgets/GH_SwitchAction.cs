@@ -3,7 +3,7 @@ using Grasshopper.Kernel.Undo;
 using System;
 using System.Collections.Generic;
 
-namespace Parametric_FEM_Toolbox.UIWidgets
+namespace KarambaUIWidgets.UIWidgets
 {
     public class GH_SwitchAction : GH_UndoAction
     {

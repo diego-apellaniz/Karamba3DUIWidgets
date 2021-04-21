@@ -2,7 +2,7 @@
 using Grasshopper.Kernel;
 using System.Collections.Generic;
 
-namespace Parametric_FEM_Toolbox.UIWidgets
+namespace KarambaUIWidgets.UIWidgets
 {
     public abstract class GH_ExtendableComponent : GH_Component
     {

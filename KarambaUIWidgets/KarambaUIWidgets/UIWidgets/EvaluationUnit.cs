@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Reflection;
 
-namespace Parametric_FEM_Toolbox.UIWidgets
+namespace KarambaUIWidgets.UIWidgets
 {
     public class EvaluationUnit
     {

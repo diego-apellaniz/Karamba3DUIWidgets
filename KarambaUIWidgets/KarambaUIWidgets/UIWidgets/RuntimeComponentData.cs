@@ -3,7 +3,7 @@ using Rhino;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace Parametric_FEM_Toolbox.UIWidgets
+namespace KarambaUIWidgets.UIWidgets
 {
     public class RuntimeComponentData
     {

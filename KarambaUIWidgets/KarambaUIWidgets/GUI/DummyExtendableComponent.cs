@@ -2,15 +2,16 @@
 using Rhino.Geometry;
 using System;
 using System.Collections.Generic;
+using KarambaUIWidgets.UIWidgets;
 
 // In order to load the result of this wizard, you will also need to
 // add the output bin/ folder of this project to the list of loaded
 // folder in Grasshopper.
 // You can use the _GrasshopperDeveloperSettings Rhino command for that.
 
-namespace KarambaUIWidgets
+namespace GUI
 {
-    public class KarambaUIWidgetsComponent : GH_Component
+    public class KarambaUIWidgetsComponent : GH_ExtendableComponent
     {
         /// <summary>
         /// Each implementation of GH_Component must provide a public 
@@ -38,6 +39,14 @@ namespace KarambaUIWidgets
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
+        }
+
+
+
+        protected override void Setup(GH_ExtendableComponentAttributes attr)
+        {
+
+
         }
 
         /// <summary>

@@ -1,6 +1,6 @@
 ﻿using Grasshopper.Kernel;
 
-namespace Parametric_FEM_Toolbox.UIWidgets
+namespace KarambaUIWidgets.UIWidgets
 {
     public abstract class SubComponent
     {

@@ -8,7 +8,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Linq;
 
-namespace Parametric_FEM_Toolbox.UIWidgets
+namespace KarambaUIWidgets.UIWidgets
 {
     public abstract class GH_SwitcherComponent : GH_Component
     {

@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Eto, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Eto.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -56,7 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\KarambaUIWidgetsComponent.cs" />
+    <Compile Include="GUI\DummyExtendableComponent.cs" />
     <Compile Include="KarambaUIWidgetsInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIWidgets\EvaluationUnit.cs" />

@@ -1,6 +1,6 @@
 ﻿using Grasshopper.GUI.Canvas;
 
-namespace Parametric_FEM_Toolbox.UIWidgets
+namespace KarambaUIWidgets.UIWidgets
 {
     public class WidgetRenderArgs
     {
