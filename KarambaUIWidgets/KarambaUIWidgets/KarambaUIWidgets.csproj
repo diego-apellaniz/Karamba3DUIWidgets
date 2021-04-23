@@ -36,6 +36,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Eto.dll</HintPath>
     </Reference>
+    <Reference Include="GH_IO">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Rhino 6\Plug-ins\Grasshopper\GH_IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Grasshopper">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Rhino 6\Plug-ins\Grasshopper\Grasshopper.dll</HintPath>
+    </Reference>
+    <Reference Include="RhinoCommon">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\Rhino 6\System\RhinoCommon.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -43,21 +52,6 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="RhinoCommon">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Rhino 6\System\rhinocommon.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Grasshopper">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Rhino 6\Plug-ins\Grasshopper\Grasshopper.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="GH_IO">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Rhino 6\Plug-ins\Grasshopper\GH_IO.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GUI\DummyExtendableComponent.cs" />
@@ -78,6 +72,8 @@
     <Compile Include="UIWidgets\MenuCheckBox.cs" />
     <Compile Include="UIWidgets\MenuDropDown.cs" />
     <Compile Include="UIWidgets\MenuPanel.cs" />
+    <Compile Include="UIWidgets\MenuRadioButton.cs" />
+    <Compile Include="UIWidgets\MenuRadioButtonGroup.cs" />
     <Compile Include="UIWidgets\MenuSlider.cs" />
     <Compile Include="UIWidgets\MenuStaticText.cs" />
     <Compile Include="UIWidgets\RuntimeComponentData.cs" />
@@ -100,6 +96,7 @@
   -->
   <PropertyGroup>
     <PostBuildEvent>Copy "$(TargetPath)" "$(TargetDir)$(ProjectName).gha"
+Copy "$(TargetPath)" "C:\Users\fedei\AppData\Roaming\Grasshopper\Libraries\$(ProjectName).gha"
 Erase "$(TargetPath)"</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>

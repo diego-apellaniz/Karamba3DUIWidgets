@@ -1,0 +1,16 @@
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\bin\KarambaUIWidgets.dll
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\bin\KarambaUIWidgets.pdb
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\bin\GH_IO.dll
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\bin\Grasshopper.dll
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\bin\RhinoCommon.dll
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\bin\Mono.Cecil.dll
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\bin\GH_Util.dll
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\bin\Eto.xml
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\bin\GH_IO.xml
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\bin\Grasshopper.xml
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\bin\RhinoCommon.xml
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\obj\Debug\KarambaUIWidgets.csprojAssemblyReference.cache
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\obj\Debug\KarambaUIWidgets.csproj.CoreCompileInputs.cache
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\obj\Debug\KarambaUIWidgets.csproj.CopyComplete
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\obj\Debug\KarambaUIWidgets.dll
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\obj\Debug\KarambaUIWidgets.pdb
