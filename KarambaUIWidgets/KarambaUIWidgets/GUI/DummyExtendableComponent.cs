@@ -21,6 +21,9 @@ namespace GUI
         private string _valuecheckbox2 = "Initial Value";
         private MenuRadioButtonGroup _colorGrp;
         private string radiovariable = "radiovar";
+        private double _doublefunction;
+        private MenuSlider _sliderexample;
+        private string dropvariable = "dropvar";
 
         //private void _loadDrop__valueChanged(object sender, EventArgs e)
         //{
@@ -83,10 +86,14 @@ namespace GUI
             evaluationUnit.RegisterOutputParam(new Param_Number(), "MultResult", "Multiplication Output", "Output of multiplication");
             evaluationUnit.RegisterOutputParam(new Param_Number(), "SumResult", "Addition Output", "Output of addition");
 
+            evaluationUnit.RegisterOutputParam(new Param_String(), "DropOutput", "DropdownOutput", "A dropdown value");
+
             evaluationUnit.RegisterOutputParam(new Param_String(), "Checkboxresult", "Checkbox Output", "Output of Boolean");
             evaluationUnit.RegisterOutputParam(new Param_String(), "Checkboxresult2", "Checkbox Output 2", "Output of Boolean");
 
             evaluationUnit.RegisterOutputParam(new Param_String(), "RadioButtonResult", "RadioButton Output", "Output of RadioButton");
+
+            evaluationUnit.RegisterOutputParam(new Param_Number(), "SliderOutput", "SliderOutput1", "A slider value");
 
 
             GH_ExtendableMenu gH_ExtendableMenu0 = new GH_ExtendableMenu(0, "Extendable Menu");
@@ -99,12 +106,18 @@ namespace GUI
             gH_ExtendableMenu0.RegisterOutputPlug(evaluationUnit.Outputs[0]);
             gH_ExtendableMenu0.RegisterOutputPlug(evaluationUnit.Outputs[1]);
 
-            //checkbox
+            //dropdownmenu
             gH_ExtendableMenu0.RegisterOutputPlug(evaluationUnit.Outputs[2]);
+
+            //checkbox
             gH_ExtendableMenu0.RegisterOutputPlug(evaluationUnit.Outputs[3]);
+            gH_ExtendableMenu0.RegisterOutputPlug(evaluationUnit.Outputs[4]);
 
             //radiobutton
-            gH_ExtendableMenu0.RegisterOutputPlug(evaluationUnit.Outputs[4]);
+            gH_ExtendableMenu0.RegisterOutputPlug(evaluationUnit.Outputs[5]);
+
+            //slider
+            gH_ExtendableMenu0.RegisterOutputPlug(evaluationUnit.Outputs[6]);
 
             // Second Extendable Menu (Drop Down Menu)
 
@@ -129,6 +142,8 @@ namespace GUI
             _dropdownmenu.AddItem("key2", "value2");
             _dropdownmenu.AddItem("key3", "value3");
 
+            _dropdownmenu.ValueChanged += _dropdownGrp__valueChanged;
+
             dropdownmenupanel.AddControl(_dropdownmenu);
             gH_ExtendableMenu1.AddControl(dropdownmenupanel);
 
@@ -151,12 +166,10 @@ namespace GUI
             _checkbox2.Active = false;
             _checkbox2.Header = "have fun ticking more of the boxes";
 
-
             dropdownmenupanel2.AddControl(_checkbox1);
             dropdownmenupanel2.AddControl(_checkbox2);
 
             gH_ExtendableMenu2.AddControl(dropdownmenupanel2);
-
 
             // RadioButton
 
@@ -187,6 +200,23 @@ namespace GUI
             radiomenupanel3.AddControl(_colorGrp);
 
             gH_ExtendableMenu3.AddControl(radiomenupanel3);
+
+            // Slider
+
+            GH_ExtendableMenu gH_ExtendableMenu4 = new GH_ExtendableMenu(4, "Slider Menu");
+            gH_ExtendableMenu4.Name = "Slider Menu";
+            gH_ExtendableMenu4.Expand();
+            evaluationUnit.AddMenu(gH_ExtendableMenu4);
+
+            MenuPanel slidermenupanel4 = new MenuPanel(4, "slidermenupanel");
+            slidermenupanel4.Header = "A given slider";
+
+            _sliderexample = new MenuSlider(3, "exampleslider", 0.0, 1.0, 0.0, 2);
+            _sliderexample.ValueChanged += _slider__valueChanged;
+            _sliderexample.Header = "Example Slider";
+
+            slidermenupanel4.AddControl(_sliderexample);
+            gH_ExtendableMenu4.AddControl(slidermenupanel4);
 
 
             //_colorGrp = new MenuRadioButtonGroup(2, "radiogrp_color");
@@ -314,11 +344,17 @@ namespace GUI
 
             //checkbox boolean
 
-            DA.SetData(3, _valuecheckbox1);
-            DA.SetData(4, _valuecheckbox2);
+            DA.SetData(4, _valuecheckbox1);
+            DA.SetData(5, _valuecheckbox2);
 
             //radiobutton
-            DA.SetData(5, radiovariable);
+            DA.SetData(6, radiovariable);
+
+            //slider
+            DA.SetData(7, _doublefunction);
+
+            //dropdown
+            DA.SetData(3, dropvariable);
 
             //            public bool Scale(
             //    double scaleFactor
@@ -372,12 +408,29 @@ namespace GUI
 
         //radiobutton functionality
 
+        private void _dropdownGrp__valueChanged(object sender, EventArgs e)
+        {
+            int dropdownindex = _dropdownmenu.Value;
+            dropvariable = dropdownindex.ToString() + ". Dropdownvalue Active";
+            setModelProps();
+        }
 
+        //private void _drop__valueChanged(object sender, EventArgs e)
+        //{
+        //    _ = (MenuDropDown)sender;
+        //    setModelProps();
+        //}
 
         private void _colorGrp__valueChanged(object sender, EventArgs e)
         {
-           int radioindex = _colorGrp.GetActiveInt()[0];
+            int radioindex = _colorGrp.GetActiveInt()[0];
             radiovariable = radioindex.ToString() + ". Radiobutton Active";
+            setModelProps();
+        }
+
+        private void _slider__valueChanged(object sender, EventArgs e)
+        {
+            _doublefunction = ((MenuSlider)sender).Value;
             setModelProps();
         }
 
