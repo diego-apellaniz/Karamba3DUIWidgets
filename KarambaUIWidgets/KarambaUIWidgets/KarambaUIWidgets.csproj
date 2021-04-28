@@ -54,9 +54,18 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\DummyExtendableSwitcher.cs" />
+    <Compile Include="GUI\SubComponent_Square.cs" />
+    <Compile Include="GUI\SubComponent_Circle.cs" />
     <Compile Include="GUI\DummyExtendableComponent.cs" />
+    <Compile Include="GUI\DummySwitcherComponent.cs" />
     <Compile Include="KarambaUIWidgetsInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UIWidgets\EvaluationUnit.cs" />
     <Compile Include="UIWidgets\EvaluationUnitContext.cs" />
     <Compile Include="UIWidgets\EvaluationUnitManager.cs" />
@@ -85,6 +94,24 @@
     <Compile Include="UIWidgets\WidgetChannel.cs" />
     <Compile Include="UIWidgets\WidgetRenderArgs.cs" />
     <Compile Include="UIWidgets\WidgetServer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minion_Lautsprecher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minion_reading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flubber2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -13,7 +13,7 @@ using KarambaUIWidgets.Properties;
 
 namespace GUI
 {
-    public class DummyExtendableComponent : GH_ExtendableComponent
+    public class DummyExtendableSwitcher : GH_SwitcherComponent
     {
         private MenuDropDown _dropdownmenu;
         private MenuCheckBox _checkbox1;
@@ -39,7 +39,7 @@ namespace GUI
         /// Subcategory the panel. If you use non-existing tab or panel names, 
         /// new tabs/panels will automatically be created.
         /// </summary>
-        public DummyExtendableComponent()
+        public DummyExtendableSwitcher()
           : base("Extendable Component", "ExtComp",
               "A Test Component",
               "B+G Toolbox", "UIWidgets")
@@ -70,14 +70,62 @@ namespace GUI
 
 
 
-        protected override void Setup(GH_ExtendableComponentAttributes attr)
+        protected override void RegisterEvaluationUnits(EvaluationUnitManager mngr)
         {
+
+            EvaluationUnit evaluationUnit = new EvaluationUnit("ExtendableComponent", "ExtComp", "A Test Component");
+            mngr.RegisterUnit(evaluationUnit);
+
+            // First Extendable Menu (Multiplication and Summation)
+
+            evaluationUnit.RegisterInputParam(new Param_Number(), "P1", "Parameter1", "A parameter value", GH_ParamAccess.item);
+            evaluationUnit.RegisterInputParam(new Param_Number(), "P2", "Parameter2", "A second parameter value", GH_ParamAccess.item);
+            evaluationUnit.Inputs[0].Parameter.Optional = true;
+            evaluationUnit.Inputs[1].Parameter.Optional = true;
+
+
+            evaluationUnit.RegisterOutputParam(new Param_Number(), "MultResult", "Multiplication Output", "Output of multiplication");
+            evaluationUnit.RegisterOutputParam(new Param_Number(), "SumResult", "Addition Output", "Output of addition");
+
+            evaluationUnit.RegisterOutputParam(new Param_String(), "DropOutput", "DropdownOutput", "A dropdown value");
+
+            evaluationUnit.RegisterOutputParam(new Param_String(), "Checkboxresult", "Checkbox Output", "Output of Boolean");
+            evaluationUnit.RegisterOutputParam(new Param_String(), "Checkboxresult2", "Checkbox Output 2", "Output of Boolean");
+
+            evaluationUnit.RegisterOutputParam(new Param_String(), "RadioButtonResult", "RadioButton Output", "Output of RadioButton");
+
+            evaluationUnit.RegisterOutputParam(new Param_Number(), "SliderOutput", "SliderOutput1", "A slider value");
+
+
+            GH_ExtendableMenu gH_ExtendableMenu0 = new GH_ExtendableMenu(0, "Extendable Menu");
+            gH_ExtendableMenu0.Name = "Extendable Menu";
+            gH_ExtendableMenu0.Expand();
+            evaluationUnit.AddMenu(gH_ExtendableMenu0);
+            gH_ExtendableMenu0.RegisterInputPlug(evaluationUnit.Inputs[0]);
+            gH_ExtendableMenu0.RegisterInputPlug(evaluationUnit.Inputs[1]);
+
+            gH_ExtendableMenu0.RegisterOutputPlug(evaluationUnit.Outputs[0]);
+            gH_ExtendableMenu0.RegisterOutputPlug(evaluationUnit.Outputs[1]);
+
+            //dropdownmenu
+            gH_ExtendableMenu0.RegisterOutputPlug(evaluationUnit.Outputs[2]);
+
+            //checkbox
+            gH_ExtendableMenu0.RegisterOutputPlug(evaluationUnit.Outputs[3]);
+            gH_ExtendableMenu0.RegisterOutputPlug(evaluationUnit.Outputs[4]);
+
+            //radiobutton
+            gH_ExtendableMenu0.RegisterOutputPlug(evaluationUnit.Outputs[5]);
+
+            //slider
+            gH_ExtendableMenu0.RegisterOutputPlug(evaluationUnit.Outputs[6]);
+
             // Second Extendable Menu (Drop Down Menu)
 
             GH_ExtendableMenu gH_ExtendableMenu1 = new GH_ExtendableMenu(1, "Drop Down Menu");
             gH_ExtendableMenu1.Name = "Drop Down Menu";
             gH_ExtendableMenu1.Expand();
-            attr.AddMenu(gH_ExtendableMenu1);
+            evaluationUnit.AddMenu(gH_ExtendableMenu1);
 
             MenuPanel dropdownmenupanel = new MenuPanel(1, "dropdowntest");
             dropdownmenupanel.Header = "random words";
@@ -104,7 +152,7 @@ namespace GUI
 
             GH_ExtendableMenu gH_ExtendableMenu2 = new GH_ExtendableMenu(2, "Tick Box Menu");
             gH_ExtendableMenu2.Name = "TickBoxes";
-            attr.AddMenu(gH_ExtendableMenu2);
+            evaluationUnit.AddMenu(gH_ExtendableMenu2);
 
             MenuPanel dropdownmenupanel2 = new MenuPanel(2, "dropdownmenupanel");
             dropdownmenupanel2.Header = "A set of pointless ticboxes";
@@ -135,7 +183,7 @@ namespace GUI
             GH_ExtendableMenu gH_ExtendableMenu3 = new GH_ExtendableMenu(3, "RadioButton Menu");
             gH_ExtendableMenu3.Name = "RadioButton Menu";
             gH_ExtendableMenu3.Expand();
-            attr.AddMenu(gH_ExtendableMenu3);
+            evaluationUnit.AddMenu(gH_ExtendableMenu3);
 
             MenuPanel radiomenupanel3 = new MenuPanel(3, "radiobuttontest");
             dropdownmenupanel.Header = "random radio words";
@@ -159,7 +207,7 @@ namespace GUI
             GH_ExtendableMenu gH_ExtendableMenu4 = new GH_ExtendableMenu(4, "Slider Menu");
             gH_ExtendableMenu4.Name = "Slider Menu";
             gH_ExtendableMenu4.Expand();
-            attr.AddMenu(gH_ExtendableMenu4);
+            evaluationUnit.AddMenu(gH_ExtendableMenu4);
 
             MenuPanel slidermenupanel4 = new MenuPanel(4, "slidermenupanel");
             slidermenupanel4.Header = "A given slider";
@@ -265,7 +313,7 @@ namespace GUI
         /// </summary>
         /// <param name="DA">The DA object can be used to retrieve data from input parameters and 
         /// to store data in output parameters.</param>
-        protected override void SolveInstance(IGH_DataAccess DA)
+        protected override void SolveInstance(IGH_DataAccess DA, EvaluationUnit unit)
         {
 
             // Declare a variable for the input String
@@ -324,7 +372,7 @@ namespace GUI
             get
             {
                 // You can add image files to your project resources and access them like this:
-                return Resources.Flubber2;
+                return Resources.panda;
             }
         }
 
@@ -400,7 +448,7 @@ namespace GUI
         /// </summary>
         public override Guid ComponentGuid
         {
-            get { return new Guid("e312506a-9bf9-49f4-a682-e6e0b5c547a9"); }
+            get { return new Guid("405a7672-bbab-407c-8776-1b0549283fb9"); }
         }
     }
 }

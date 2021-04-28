@@ -14,3 +14,5 @@ C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWid
 C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\obj\Debug\KarambaUIWidgets.csproj.CopyComplete
 C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\obj\Debug\KarambaUIWidgets.dll
 C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\obj\Debug\KarambaUIWidgets.pdb
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\obj\Debug\KarambaUIWidgets.Properties.Resources.resources
+C:\Users\fedei\OneDrive\Documents\TestRepositories\KarambaUIWidgets\KarambaUIWidgets\KarambaUIWidgets\obj\Debug\KarambaUIWidgets.csproj.GenerateResource.cache
