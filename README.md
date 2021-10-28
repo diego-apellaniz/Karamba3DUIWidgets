@@ -23,6 +23,9 @@ Similar to a checkbox, a radiobutton acts as an individual check, meaning other 
 #### Slider
 A value slider of two decimal places, the output reflects the slider value.
 
+#### Static text
+A plain text block
+
 ## Switcher Component
 
 ![3](https://user-images.githubusercontent.com/73039064/116399800-9ad97480-a829-11eb-82ab-f260a5712303.png)
