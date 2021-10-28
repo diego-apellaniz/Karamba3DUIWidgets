@@ -34,7 +34,7 @@ A switcher component is a menu that adapts inputs and outputs depending on the d
 
 ## Extendable Component
 
-![12](https://user-images.githubusercontent.com/73039064/116400077-e68c1e00-a829-11eb-8071-fddf44f2a6c2.png)
+![12](https://i.ibb.co/v4dZxkL/extendable-componentdo-not-delete.png)
 
 DummyExtendableComponent:
 A proof of concept extendable built with the GH_ExtendableCOmponent class. The method of defining input and output parameters differs to using a GH_SwitcherComponent. The inputs and outputs reflect the same covered in the previous extendable component.
