@@ -1,6 +1,10 @@
 # KarambaUIWidgets
 A breakdown example of different UI Widgets from the Grasshopper Plugin Karamba3d, displaying some structural functionalities through code.
 
+The code of the GUI-Widgets comes from Karamba3D. They were developed by Christoph Zimmel in cooperation with Bollinger und Grohmann ZT GmbH in Vienna.
+
+This repository has been created by Federico Chiavegati and Diego Apellániz to gather all the Widgets and make their code public, with authorization of the above mentioned original developers.
+
 ## Switcher Multivariate Component
 
 ![test2](https://user-images.githubusercontent.com/73039064/116399320-18e94b80-a829-11eb-82d7-d78b94852a6e.png)
