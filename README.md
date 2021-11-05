@@ -1,4 +1,4 @@
-# KarambaUIWidgets
+# Karamba3DUIWidgets
 A breakdown example of different UI Widgets from the Grasshopper Plugin Karamba3d, displaying some structural functionalities through code.
 
 The code of the GUI-Widgets comes from Karamba3D. They were developed by Christoph Zimmel in cooperation with Bollinger und Grohmann ZT GmbH in Vienna.
